@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".subActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:hint="리스트 이름을 입력하세요"
+        android:id="@+id/editText_listname"
+        android:fontFamily="@font/sangju4"
+        android:gravity="center"
+        />
+   <EditText
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textSize="30dp"
+       android:hint="식당 또는 메뉴를 입력하세요"
+       android:id="@+id/editText"
+       android:fontFamily="@font/sangju4"
+       android:gravity="center"
+       android:enabled="false"
+       />
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center">
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="메뉴추가"
+       android:id="@+id/btn_Add"
+       android:fontFamily="@font/sangju"
+       android:background="#B9B7BD"
+       android:enabled="false"
+       />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:orientation="vertical"
+      android:layout_weight="1"
+      >
+
+      <ListView
+          android:id="@+id/listview1"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:choiceMode="multipleChoice"
+          android:fontFamily="@font/sangju3"
+          />
+
+</LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btn_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="삭제"
+        android:fontFamily="@font/sangju"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="리스트추가"
+        android:id="@+id/btn_listAdd"
+        android:fontFamily="@font/sangju"
+        android:background="@color/white"
+        android:clickable="false"
+        />
+   </LinearLayout>
+
+
+</LinearLayout>
