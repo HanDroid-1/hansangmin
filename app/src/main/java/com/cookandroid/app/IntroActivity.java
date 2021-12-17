@@ -24,7 +24,7 @@ public class IntroActivity extends AppCompatActivity {
                 finish();
             }
         },2000); // Handler 객체의 postDelayerd메소드를 이용한 인트로화면 구성 로직
-
+                           // 2초 후 인텐트를 통해 현재 액티비티 종료후 MainActivity로 넘어감
 
 
 

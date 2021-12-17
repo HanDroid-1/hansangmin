@@ -48,22 +48,7 @@ public class subActivity extends AppCompatActivity {
 
         //items.add("햄버거");
 
-        btn_listAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String _name = editText_listname.getText().toString();
-                String _food = editText_food.getText().toString();
 
-                Intent outintent = new Intent(getApplicationContext(), MainActivity.class);
-                outintent.putExtra("name",_name);
-                outintent.putExtra("food",_food);
-                outintent.putExtra("position",position);
-                setResult(RESULT_OK, outintent);
-                finish();
-
-
-            }
-        });
 
 
         //(TextWatcher : edittext안의 값의 변화 감지)editText안에 값이 있을때
@@ -110,8 +95,22 @@ public class subActivity extends AppCompatActivity {
                     }
             }
         });
+        btn_listAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String _name = editText_listname.getText().toString();
+                String _food = editText_food.getText().toString();
+
+                Intent outintent = new Intent(getApplicationContext(), MainActivity.class);
+                outintent.putExtra("name",_name);
+                outintent.putExtra("food",_food);
+                outintent.putExtra("position",position);
+                setResult(RESULT_OK, outintent);
+                finish();
 
 
+            }
+        });
 
         btn_Add.setOnClickListener(new View.OnClickListener() {
             @Override

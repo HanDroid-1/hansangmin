@@ -71,11 +71,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+        launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), //값을 받아올때 런처방식사용
         result -> {
-            if(result.getResultCode() == Activity.RESULT_OK){
+            if(result.getResultCode() == Activity.RESULT_OK){        //resultcode가 result_Ok이면
                 Intent data = result.getData();
-                String name = data.getStringExtra("name");
+                String name = data.getStringExtra("name");    //subActivity에서 해당 키값들로 넘겨준 데이터들을 각각의 변수에 담아준다
                 String food = data.getStringExtra("food");
                 int position = data.getIntExtra("position",0);
 
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
         btn_random.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Intent intent = new Intent(getApplicationContext(),subActivity2.class);
+               Intent intent = new Intent(getApplicationContext(),subActivity2.class); //랜덤버튼 눌리면 Sub2액티비티로 이동
                startActivity(intent);
            }
        });
@@ -116,9 +116,9 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),subActivity.class);
+                Intent intent = new Intent(getApplicationContext(),subActivity.class); //목록추가 버튼누르면 sub액티비티로 이동
                 intent.putExtra("name","");
-                intent.putExtra("food","");
+                intent.putExtra("food","");                //해당 이름들로 키값을 줘서 넘겨준다.
                 intent.putExtra("position",arrayList.size());
                 launcher.launch(intent);
 

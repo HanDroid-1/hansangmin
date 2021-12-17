@@ -25,7 +25,6 @@ public class subActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_sub2);
         setTitle("오늘 뭐 먹지?");
         Intent intent = getIntent();
-
         EditText editText_random = (EditText)findViewById(R.id.Et_random);
         EditText Et_add = (EditText)findViewById(R.id.Et_add);
         Button Menu_Add = (Button)findViewById(R.id.btn_add2);
@@ -124,6 +123,11 @@ public class subActivity2 extends AppCompatActivity {
 
             }
         });
+
+
+
+
+
 
     }
 }

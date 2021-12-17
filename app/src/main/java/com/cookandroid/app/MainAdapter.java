@@ -58,6 +58,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHold
             super(itemView);
             names = itemView.findViewById(R.id.name);
             foods = itemView.findViewById(R.id.food);
+            //뷰홀더에있는 아이템뷰를 클릭했을때 이벤트
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -73,6 +74,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHold
                     }
                 }
             });
+            //아이템뷰 롱클릭시 해당데이터삭제
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
